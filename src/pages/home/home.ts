@@ -7,8 +7,37 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+    firstNumber: number;
+    secondNumber: number;
+    constructor(public navCtrl: NavController) { }
 
-  }
+    add() {
+       
+        var a = +(this.firstNumber) + +(this.secondNumber);
+        document.getElementById("ressult").innerHTML = "" + a;
+        
+
+    }
+    subtract() {
+        var a = +(this.firstNumber) - +(this.secondNumber);
+        document.getElementById("ressult").innerHTML = "" + a;
+
+
+    }
+    division() {
+
+        var a = +(this.firstNumber) / +(this.secondNumber);
+        document.getElementById("ressult").innerHTML = "" + a;
+
+
+    }
+    multiply() {
+
+        var a = +(this.firstNumber) * +(this.secondNumber);
+        document.getElementById("ressult").innerHTML = "" + a;
+
+
+    }
 
 }
+

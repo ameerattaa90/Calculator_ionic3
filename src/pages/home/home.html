@@ -1,14 +1,44 @@
-<ion-header>
+<ion-header >
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="background-color:palevioletred; text-align:center; padding:20pt; font-family:Algerian">
+    <h1 id="=tittle" >Calculator</h1> 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-list>
+
+        <ion-item>
+            <ion-label stacked class="lables" >Number 1</ion-label>
+            <ion-input type="number" id='a' [(ngModel)]="firstNumber" class="inputbox"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked class="lables">Number 2</ion-label>
+            <ion-input type="number" id='b' [(ngModel)]="secondNumber"  class="inputbox" ></ion-input>
+        </ion-item>
+        <br/>
+         <ion-item>
+             <ion-label stacked id="ressult" class="lables">Result</ion-label>
+
+            
+           
+         </ion-item>
+        <ion-item >
+            <button ion-button color="dark" large (click)="add()" style="margin:5px;">+</button>
+            <button ion-button color="dark" large (click)="subtract()" style="margin:5px;">-</button>
+            <button ion-button color="dark" large (click)="multiply()" style="margin:5px;">*</button>
+            <button ion-button color="dark" large (click)="division()" style="margin:5px;">/</button>
+
+        </ion-item>
+      
+
+    </ion-list>
 </ion-content>
+
+<ion-footer id="foter">
+    <ion-toolbar>
+        <ion-title style="background-color:silver; font-weight:bolder; ">Code for babil</ion-title>
+    </ion-toolbar>
+</ion-footer>
